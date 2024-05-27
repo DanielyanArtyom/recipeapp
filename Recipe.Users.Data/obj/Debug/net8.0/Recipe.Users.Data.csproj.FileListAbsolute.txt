@@ -1,0 +1,12 @@
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/bin/Debug/net8.0/Recipe.Users.Data.deps.json
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/bin/Debug/net8.0/Recipe.Users.Data.dll
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/bin/Debug/net8.0/Recipe.Users.Data.pdb
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/Recipe.Users.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/Recipe.Users.Data.AssemblyInfoInputs.cache
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/Recipe.Users.Data.AssemblyInfo.cs
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/Recipe.Users.Data.csproj.CoreCompileInputs.cache
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/Recipe.Users.Data.dll
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/refint/Recipe.Users.Data.dll
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/Recipe.Users.Data.pdb
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/ref/Recipe.Users.Data.dll
+/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/Debug/net8.0/Recipe.Users.Data.csproj.AssemblyReference.cache

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "YLGLBTIK32wjQDwo3SgIPQIefMrw9Yqu3QIKeFuXIhI=",
+  "Source": "Recipe.Users.Webapi",
+  "BasePath": "_content/Recipe.Users.Webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
