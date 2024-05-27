@@ -1,33 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Webapi/Recipe.Users.Webapi.csproj": {}
+    "D:\\projects\\recipeapp\\Recipe.Users.Webapi\\Recipe.Users.Webapi.csproj": {}
   },
   "projects": {
-    "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Business/Recipe.Users.Business.csproj": {
+    "D:\\projects\\recipeapp\\Recipe.Users.Business\\Recipe.Users.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Business/Recipe.Users.Business.csproj",
+        "projectUniqueName": "D:\\projects\\recipeapp\\Recipe.Users.Business\\Recipe.Users.Business.csproj",
         "projectName": "Recipe.Users.Business",
-        "projectPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Business/Recipe.Users.Business.csproj",
-        "packagesPath": "/Users/artyomdanielyan/.nuget/packages/",
-        "outputPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Business/obj/",
+        "projectPath": "D:\\projects\\recipeapp\\Recipe.Users.Business\\Recipe.Users.Business.csproj",
+        "packagesPath": "C:\\Users\\artyom.danielyan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\recipeapp\\Recipe.Users.Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/artyomdanielyan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\artyom.danielyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/Recipe.Users.Data.csproj": {
-                "projectPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/Recipe.Users.Data.csproj"
+              "D:\\projects\\recipeapp\\Recipe.Users.Data\\Recipe.Users.Data.csproj": {
+                "projectPath": "D:\\projects\\recipeapp\\Recipe.Users.Data\\Recipe.Users.Data.csproj"
               }
             }
           }
@@ -36,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -75,26 +87,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/Recipe.Users.Data.csproj": {
+    "D:\\projects\\recipeapp\\Recipe.Users.Data\\Recipe.Users.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/Recipe.Users.Data.csproj",
+        "projectUniqueName": "D:\\projects\\recipeapp\\Recipe.Users.Data\\Recipe.Users.Data.csproj",
         "projectName": "Recipe.Users.Data",
-        "projectPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/Recipe.Users.Data.csproj",
-        "packagesPath": "/Users/artyomdanielyan/.nuget/packages/",
-        "outputPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/obj/",
+        "projectPath": "D:\\projects\\recipeapp\\Recipe.Users.Data\\Recipe.Users.Data.csproj",
+        "packagesPath": "C:\\Users\\artyom.danielyan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\recipeapp\\Recipe.Users.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/artyomdanielyan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\artyom.danielyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -107,23 +126,38 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0-preview.4.24267.1, )"
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[9.0.0-preview.4.24267.1, )"
+              "version": "[8.0.5, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.0-preview.3, )"
+              "version": "[8.0.4, )"
             }
           },
           "imports": [
@@ -142,37 +176,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Webapi/Recipe.Users.Webapi.csproj": {
+    "D:\\projects\\recipeapp\\Recipe.Users.Webapi\\Recipe.Users.Webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Webapi/Recipe.Users.Webapi.csproj",
+        "projectUniqueName": "D:\\projects\\recipeapp\\Recipe.Users.Webapi\\Recipe.Users.Webapi.csproj",
         "projectName": "Recipe.Users.Webapi",
-        "projectPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Webapi/Recipe.Users.Webapi.csproj",
-        "packagesPath": "/Users/artyomdanielyan/.nuget/packages/",
-        "outputPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Webapi/obj/",
+        "projectPath": "D:\\projects\\recipeapp\\Recipe.Users.Webapi\\Recipe.Users.Webapi.csproj",
+        "packagesPath": "C:\\Users\\artyom.danielyan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\recipeapp\\Recipe.Users.Webapi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/artyomdanielyan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\artyom.danielyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Business/Recipe.Users.Business.csproj": {
-                "projectPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Business/Recipe.Users.Business.csproj"
+              "D:\\projects\\recipeapp\\Recipe.Users.Business\\Recipe.Users.Business.csproj": {
+                "projectPath": "D:\\projects\\recipeapp\\Recipe.Users.Business\\Recipe.Users.Business.csproj"
               },
-              "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/Recipe.Users.Data.csproj": {
-                "projectPath": "/Users/artyomdanielyan/Desktop/myProjcets/Recipe/Recipe.Users.Data/Recipe.Users.Data.csproj"
+              "D:\\projects\\recipeapp\\Recipe.Users.Data\\Recipe.Users.Data.csproj": {
+                "projectPath": "D:\\projects\\recipeapp\\Recipe.Users.Data\\Recipe.Users.Data.csproj"
               }
             }
           }
@@ -181,6 +222,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -191,21 +237,25 @@
               "target": "Package",
               "version": "[8.0.5, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0-preview.4.24267.1, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0-preview.4.24267.1, )"
+              "version": "[8.0.5, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.0-preview.3, )"
+              "version": "[8.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -231,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

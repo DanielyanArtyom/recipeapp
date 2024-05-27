@@ -3,7 +3,7 @@ using Recipe.Users.Data.Respository;
 
 namespace Recipe.Users.Data.Context;
 
-public class UnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
     private readonly RecipeUserContext _context;
     private readonly IUserRepository _userRepository;

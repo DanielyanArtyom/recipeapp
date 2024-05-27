@@ -2,31 +2,84 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Recipe.Users.Business;
+using Recipe.Users.Business.Services;
 using Recipe.Users.Data.Context;
+using Recipe.Users.Data.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(x =>
-{
-    x.TokenValidationParameters = new TokenValidationParameters
-    {
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("RandomKey")),
-        ValidIssuer = "RandomValidIssuer",
-        ValidAudience = "RandomAudience",
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-    };
-});
+
+builder.Services.AddAutoMapper(typeof(UsersAutoMapperProfile));
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddTransient<TokenService, TokenService>();
+
+//builder.Services.AddTransient<AuthService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(sw =>
+{
+    sw.AddSecurityDefinition(
+               JwtBearerDefaults.AuthenticationScheme,
+               new OpenApiSecurityScheme
+               {
+                   Name = "Authorization",
+                   In = ParameterLocation.Header,
+                   Type = SecuritySchemeType.ApiKey,
+                   Scheme = JwtBearerDefaults.AuthenticationScheme,
+                   BearerFormat = "JWT",
+                   Description = "Input your Bearer token in this format - Bearer {your token here} to access this API",
+               }
+           );
+
+    sw.AddSecurityRequirement(
+        new OpenApiSecurityRequirement
+        {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = JwtBearerDefaults.AuthenticationScheme
+                                },
+                                Scheme = JwtBearerDefaults.AuthenticationScheme,
+                                Name = JwtBearerDefaults.AuthenticationScheme,
+                                In = ParameterLocation.Header
+                            },
+                            new List<string>()
+                        }
+        }
+    );
+});
 
 builder.Services.AddDbContext<RecipeUserContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+}).AddJwtBearer(jwtOptions =>
+{
+    jwtOptions.RequireHttpsMetadata = false;
+    jwtOptions.SaveToken = true;
+    jwtOptions.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ClockSkew = TimeSpan.Zero,
+        IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.ASCII.GetBytes("Key:JR4pcvrIvI7Ms3QnTWbRoOiAQCe70kjb"))
+    };
+});
 
 builder.Services.AddAuthorization();
 
@@ -42,7 +95,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();

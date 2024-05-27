@@ -17,12 +17,9 @@ public class AuthService
         this._mapper = mapper;
         this._unitOfWork = unitOfWork;
     }
-    
-    
     public async Task<UserResponse> Registration(UserRegistration requestedUser)
     {
         requestedUser.Password = BCrypt.Net.BCrypt.HashPassword(requestedUser.Password);
-
         var mappedUser = this._mapper.Map<User>(requestedUser);
         this._userRepository.AddUser(mappedUser);
         await this._unitOfWork.SaveAsync();
