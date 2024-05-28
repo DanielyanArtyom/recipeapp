@@ -11,7 +11,7 @@ public class AuthService
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     
-    AuthService(IUnitOfWork unitOfWork, IMapper mapper)
+    public AuthService(IUnitOfWork unitOfWork, IMapper mapper)
     {
         this._userRepository = unitOfWork.UserRepository;
         this._mapper = mapper;

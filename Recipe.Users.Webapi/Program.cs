@@ -18,7 +18,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddTransient<TokenService, TokenService>();
 
-//builder.Services.AddTransient<AuthService>();
+builder.Services.AddTransient<AuthService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
