@@ -35,7 +35,7 @@ public class AuthService : IAuthService
 
             this._unitOfWork.Users.Add(mappedUser);
 
-            this._unitOfWork.Complete();
+            await this._unitOfWork.Complete();
 
             var getUser = this._unitOfWork.Users.GetBy(x => x.Email == requestedUser.Email);
 
@@ -72,6 +72,7 @@ public class AuthService : IAuthService
             throw new Exception("Email or password was wrong");
         }
         var mappedUser = this._mapper.Map<UserDTO>(user);
+
         var token = this._tokenService.CreateToken(mappedUser);
 
         return new UserResponse()

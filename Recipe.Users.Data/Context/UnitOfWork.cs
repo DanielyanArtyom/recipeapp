@@ -20,9 +20,9 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 
-    public int Complete()
+    public Task Complete()
     {
-        return this._context.SaveChanges();
+        return this._context.SaveChangesAsync();
     }
 
     public void Dispose()

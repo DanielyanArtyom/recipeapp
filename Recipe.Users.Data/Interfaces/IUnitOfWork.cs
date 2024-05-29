@@ -4,5 +4,5 @@ namespace Recipe.Users.Data.Interfaces;
 public interface IUnitOfWork : IDisposable
 {
     IRepository<User> Users { get; }
-    int Complete();
+    Task Complete();
 }
