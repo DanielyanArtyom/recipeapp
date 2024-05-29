@@ -1,7 +1,8 @@
+using Recipe.Users.Data.Entity;
 namespace Recipe.Users.Data.Interfaces;
 
-public interface IUnitOfWork
+public interface IUnitOfWork : IDisposable
 {
-    IUserRepository UserRepository { get; }
-    Task SaveAsync();
+    IRepository<User> Users { get; }
+    int Complete();
 }

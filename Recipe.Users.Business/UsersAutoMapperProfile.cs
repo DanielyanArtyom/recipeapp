@@ -8,13 +8,13 @@ public class UsersAutoMapperProfile : Profile
 {
     public UsersAutoMapperProfile()
     {
-        CreateMap<User, UserResponse>()
+        CreateMap<User, UserDTO>()
             .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
             .ReverseMap();
         
-        CreateMap<User, UserRegistration>()
+        CreateMap<User, UserRegistrationRequest>()
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
             .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
             .ReverseMap();

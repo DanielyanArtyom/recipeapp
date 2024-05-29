@@ -1,3 +1,4 @@
+using Recipe.Users.Data.Entity;
 using Recipe.Users.Data.Interfaces;
 using Recipe.Users.Data.Respository;
 
@@ -6,17 +7,26 @@ namespace Recipe.Users.Data.Context;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly RecipeUserContext _context;
-    private readonly IUserRepository _userRepository;
-    
-    public UnitOfWork(RecipeUserContext context)
-    {
-        this._context = context;
-        this._userRepository = new UserRepository(this._context);
+    private IRepository<User> _users;
+
+    public UnitOfWork(RecipeUserContext context) 
+    { 
+        this._context = context; 
     }
-    public IUserRepository UserRepository => this._userRepository;
-    
-    public async Task SaveAsync()
+    public IRepository<User> Users
     {
-        await this._context.SaveChangesAsync();
+        get { 
+            return this._users ??= new Repository<User>(_context);
+        }
+    }
+
+    public int Complete()
+    {
+        return this._context.SaveChanges();
+    }
+
+    public void Dispose()
+    {
+        _context.Dispose();
     }
 }

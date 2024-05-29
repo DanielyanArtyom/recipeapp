@@ -4,21 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Recipe.Users.Business;
+using Recipe.Users.Business.Interfaces;
 using Recipe.Users.Business.Services;
 using Recipe.Users.Data.Context;
 using Recipe.Users.Data.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddAutoMapper(typeof(UsersAutoMapperProfile));
-
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-builder.Services.AddTransient<TokenService, TokenService>();
-
-builder.Services.AddTransient<AuthService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -77,11 +69,21 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = false,
         ClockSkew = TimeSpan.Zero,
         IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.ASCII.GetBytes("Key:JR4pcvrIvI7Ms3QnTWbRoOiAQCe70kjb"))
+                Encoding.ASCII.GetBytes(builder.Configuration.GetSection("JwtSettings:Key").Value!))
     };
 });
 
 builder.Services.AddAuthorization();
+
+// Add services to the container.
+
+builder.Services.AddAutoMapper(typeof(UsersAutoMapperProfile));
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddTransient<ITokenService, TokenService>();
+
+builder.Services.AddTransient<IAuthService, AuthService>();
 
 var app = builder.Build();
 
