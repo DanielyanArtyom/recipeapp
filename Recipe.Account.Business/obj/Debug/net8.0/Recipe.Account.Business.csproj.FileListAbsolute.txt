@@ -1,0 +1,16 @@
+D:\projects\recipeapp\Recipe.Account.Business\bin\Debug\net8.0\Recipe.Account.Business.deps.json
+D:\projects\recipeapp\Recipe.Account.Business\bin\Debug\net8.0\Recipe.Account.Business.dll
+D:\projects\recipeapp\Recipe.Account.Business\bin\Debug\net8.0\Recipe.Account.Business.pdb
+D:\projects\recipeapp\Recipe.Account.Business\bin\Debug\net8.0\Recipe.Account.Data.dll
+D:\projects\recipeapp\Recipe.Account.Business\bin\Debug\net8.0\Recipe.Account.Data.pdb
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.csproj.AssemblyReference.cache
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.AssemblyInfoInputs.cache
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.AssemblyInfo.cs
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.csproj.CoreCompileInputs.cache
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.sourcelink.json
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.A.EDB8092D.Up2Date
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.dll
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\refint\Recipe.Account.Business.dll
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\Recipe.Account.Business.pdb
+D:\projects\recipeapp\Recipe.Account.Business\obj\Debug\net8.0\ref\Recipe.Account.Business.dll

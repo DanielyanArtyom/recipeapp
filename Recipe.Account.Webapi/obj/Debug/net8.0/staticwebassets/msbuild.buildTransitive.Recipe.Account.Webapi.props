@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Recipe.Account.Webapi.props" />
+</Project>
