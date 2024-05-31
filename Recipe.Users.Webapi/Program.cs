@@ -81,6 +81,8 @@ builder.Services.AddAutoMapper(typeof(UsersAutoMapperProfile));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+builder.Services.AddSingleton<IProducerService, ProducerService>();
+
 builder.Services.AddTransient<ITokenService, TokenService>();
 
 builder.Services.AddTransient<IAuthService, AuthService>();

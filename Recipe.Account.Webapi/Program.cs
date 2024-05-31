@@ -80,6 +80,8 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddAutoMapper(typeof(AccountAutoMapperProfile));
 
+builder.Services.AddHostedService<ConsumerService>();
+
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddTransient<IAccountService, AccountService>();

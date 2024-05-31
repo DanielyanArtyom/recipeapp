@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Recipe.Users.Business.Dtoes;
 using Recipe.Users.Business.Interfaces;
+using Recipe.Users.Business.Services;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Recipe.Users.Webapi.Controllers
 {
@@ -9,19 +12,26 @@ namespace Recipe.Users.Webapi.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        public IAuthService _authService { get; set; }
+        private IAuthService _authService;
+        private readonly IProducerService _producerService;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, IProducerService producerService)
         {
             this._authService = authService;
+            this._producerService = producerService;
         }
 
         [HttpPost("login")]
-        public ActionResult<UserResponse> SignIn(UserLoginRequest request)
+        public async Task<ActionResult<UserResponse>> SignIn(UserLoginRequest request)
         {
             try
             {
                 var isSignIn = this._authService.Login(request);
+
+                var message = JsonSerializer.Serialize(isSignIn);
+                 
+                await this._producerService.ProduceAsync("UserLogin", message);
+
                 return Ok(isSignIn);
             }
             catch (Exception ex)
