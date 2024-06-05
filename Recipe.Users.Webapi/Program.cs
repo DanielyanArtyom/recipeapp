@@ -79,9 +79,9 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddAutoMapper(typeof(UsersAutoMapperProfile));
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddSingleton(new KafkaProducer("testTopic", "localhost:9092"));
 
-builder.Services.AddSingleton<IProducerService, ProducerService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddTransient<ITokenService, TokenService>();
 

@@ -75,6 +75,8 @@ public class AuthService : IAuthService
 
         var token = this._tokenService.CreateToken(mappedUser);
 
+
+
         return new UserResponse()
         {
             Email = user.Email,

@@ -80,7 +80,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddAutoMapper(typeof(AccountAutoMapperProfile));
 
-builder.Services.AddHostedService<ConsumerService>();
+builder.Services.AddHostedService<KafkaConsumer>(_ => new KafkaConsumer("testTopic", "userGroupId", "localhost:9092"));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 

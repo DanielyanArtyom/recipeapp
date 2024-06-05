@@ -13,12 +13,12 @@ namespace Recipe.Users.Webapi.Controllers
     public class AuthController : ControllerBase
     {
         private IAuthService _authService;
-        private readonly IProducerService _producerService;
+        private readonly KafkaProducer _kafkaProducer;
 
-        public AuthController(IAuthService authService, IProducerService producerService)
+        public AuthController(IAuthService authService, KafkaProducer kafkaProducer)
         {
             this._authService = authService;
-            this._producerService = producerService;
+            this._kafkaProducer = kafkaProducer;
         }
 
         [HttpPost("login")]
@@ -29,9 +29,7 @@ namespace Recipe.Users.Webapi.Controllers
                 var isSignIn = this._authService.Login(request);
 
                 var message = JsonSerializer.Serialize(isSignIn);
-                 
-                await this._producerService.ProduceAsync("UserLogin", message);
-
+                await this._kafkaProducer.ProduceAsync(message);
                 return Ok(isSignIn);
             }
             catch (Exception ex)
