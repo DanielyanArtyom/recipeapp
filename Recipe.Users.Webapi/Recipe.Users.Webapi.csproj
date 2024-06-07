@@ -23,6 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\KafkaHelper\KafkaHelper.csproj" />
       <ProjectReference Include="..\Recipe.Users.Business\Recipe.Users.Business.csproj" />
       <ProjectReference Include="..\Recipe.Users.Data\Recipe.Users.Data.csproj" />
     </ItemGroup>

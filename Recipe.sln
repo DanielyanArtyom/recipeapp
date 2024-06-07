@@ -13,11 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe.Users.Webapi", "Reci
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{56498EDE-5ED2-4B6A-9DC0-28B225DE4853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Account.Data", "Recipe.Account.Data\Recipe.Account.Data.csproj", "{01645B04-3B79-4C4D-B6E3-92BDD03DC626}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe.Account.Data", "Recipe.Account.Data\Recipe.Account.Data.csproj", "{01645B04-3B79-4C4D-B6E3-92BDD03DC626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Account.Business", "Recipe.Account.Business\Recipe.Account.Business.csproj", "{45E25CD3-1C74-4D0D-BFD9-399EC755035C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe.Account.Business", "Recipe.Account.Business\Recipe.Account.Business.csproj", "{45E25CD3-1C74-4D0D-BFD9-399EC755035C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Account.Webapi", "Recipe.Account.Webapi\Recipe.Account.Webapi.csproj", "{2D9B9414-609A-467F-B297-4D8E67CCA1A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe.Account.Webapi", "Recipe.Account.Webapi\Recipe.Account.Webapi.csproj", "{2D9B9414-609A-467F-B297-4D8E67CCA1A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{6CC2BC76-62F4-400C-999F-97269C0FF565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaHelper", "KafkaHelper\KafkaHelper.csproj", "{FA00D146-B471-42BB-9725-500B6456883A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{2D9B9414-609A-467F-B297-4D8E67CCA1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D9B9414-609A-467F-B297-4D8E67CCA1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D9B9414-609A-467F-B297-4D8E67CCA1A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA00D146-B471-42BB-9725-500B6456883A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA00D146-B471-42BB-9725-500B6456883A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA00D146-B471-42BB-9725-500B6456883A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA00D146-B471-42BB-9725-500B6456883A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,7 @@ Global
 		{01645B04-3B79-4C4D-B6E3-92BDD03DC626} = {56498EDE-5ED2-4B6A-9DC0-28B225DE4853}
 		{45E25CD3-1C74-4D0D-BFD9-399EC755035C} = {56498EDE-5ED2-4B6A-9DC0-28B225DE4853}
 		{2D9B9414-609A-467F-B297-4D8E67CCA1A9} = {56498EDE-5ED2-4B6A-9DC0-28B225DE4853}
+		{FA00D146-B471-42BB-9725-500B6456883A} = {6CC2BC76-62F4-400C-999F-97269C0FF565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1CA5C4D-CA7D-468E-8B5E-490D6E051C19}

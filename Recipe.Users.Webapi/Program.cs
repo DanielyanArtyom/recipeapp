@@ -79,7 +79,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddAutoMapper(typeof(UsersAutoMapperProfile));
 
-builder.Services.AddSingleton(new KafkaProducer("testTopic", "localhost:9092"));
+builder.Services.AddSingleton(new KafkaProducer("testTopic", "localhost:9093"));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 

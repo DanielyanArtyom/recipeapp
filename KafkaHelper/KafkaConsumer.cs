@@ -1,9 +1,14 @@
 ﻿using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Recipe.Account.Business.Services
+namespace KafkaHelper
 {
-    public class KafkaConsumer: IHostedService
+    public class KafkaConsumer : IHostedService
     {
         private readonly string _topic;
         private readonly IConsumer<Null, string> _consumer;

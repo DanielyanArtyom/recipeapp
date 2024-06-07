@@ -1831,6 +1831,21 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "KafkaHelper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Confluent.Kafka": "2.4.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KafkaHelper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KafkaHelper.dll": {}
+        }
+      },
       "Recipe.Users.Business/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1838,6 +1853,7 @@
           "AutoMapper": "13.0.1",
           "BCrypt.Net-Next": "4.0.3",
           "Confluent.Kafka": "2.4.0",
+          "KafkaHelper": "1.0.0",
           "Microsoft.Extensions.Hosting": "8.0.0",
           "Microsoft.IdentityModel.Tokens": "7.5.2",
           "Recipe.Users.Data": "1.0.0",
@@ -4713,6 +4729,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "KafkaHelper/1.0.0": {
+      "type": "project",
+      "path": "../KafkaHelper/KafkaHelper.csproj",
+      "msbuildProject": "../KafkaHelper/KafkaHelper.csproj"
+    },
     "Recipe.Users.Business/1.0.0": {
       "type": "project",
       "path": "../Recipe.Users.Business/Recipe.Users.Business.csproj",
@@ -4727,6 +4748,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Confluent.Kafka >= 2.4.0",
+      "KafkaHelper >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.5",
       "Microsoft.EntityFrameworkCore >= 8.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.5",
@@ -4770,6 +4792,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\projects\\recipeapp\\KafkaHelper\\KafkaHelper.csproj": {
+              "projectPath": "D:\\projects\\recipeapp\\KafkaHelper\\KafkaHelper.csproj"
+            },
             "D:\\projects\\recipeapp\\Recipe.Users.Business\\Recipe.Users.Business.csproj": {
               "projectPath": "D:\\projects\\recipeapp\\Recipe.Users.Business\\Recipe.Users.Business.csproj"
             },

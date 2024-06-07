@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\KafkaHelper\KafkaHelper.csproj" />
       <ProjectReference Include="..\Recipe.Users.Data\Recipe.Users.Data.csproj" />
     </ItemGroup>
 
